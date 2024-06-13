@@ -1,20 +1,10 @@
-package com.tjsc.selodigital.model;
+package com.tjsc.selodigital.dto;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-
-@Entity
-public class EnteDeclarado {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+public class EnteDeclaradoDTO {
     private Long id;
     private String nome;
     private String descricao;
 
-    // Getters and Setters
     public Long getId() {
         return id;
     }
