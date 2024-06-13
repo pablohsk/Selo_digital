@@ -30,4 +30,9 @@ public class EnteDeclaradoController {
         enteDeclarado = enteDeclaradoService.createEnte(enteDeclarado);
         return Mapper.toDTO(enteDeclarado);
     }
+
+    @DeleteMapping("/{id}")
+    public void deleteEnte(@PathVariable Long id) {
+        enteDeclaradoService.deleteEnte(id);
+    }
 }

@@ -20,4 +20,8 @@ public class EnteDeclaradoService {
     public EnteDeclarado createEnte(EnteDeclarado enteDeclarado) {
         return enteDeclaradoRepository.save(enteDeclarado);
     }
+
+    public void deleteEnte(Long id) {
+        enteDeclaradoRepository.deleteById(id);
+    }
 }
