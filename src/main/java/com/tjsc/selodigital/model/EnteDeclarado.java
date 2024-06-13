@@ -14,24 +14,25 @@ public class EnteDeclarado {
     private String nome;
     private String descricao;
 
+    // Getters and Setters
     public Long getId() {
         return id;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public String getDescricao() {
-        return descricao;
     }
 
     public void setId(Long id) {
         this.id = id;
     }
 
+    public String getNome() {
+        return nome;
+    }
+
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public String getDescricao() {
+        return descricao;
     }
 
     public void setDescricao(String descricao) {

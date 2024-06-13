@@ -1,25 +1,24 @@
 package com.tjsc.selodigital.controller;
 
+import com.tjsc.selodigital.dto.UserCredentialsDTO;
+import com.tjsc.selodigital.service.AuthService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/auth")
 public class AuthController {
 
+    @Autowired
+    private AuthService authService;
+
     @PostMapping("/login")
-    public String login(@RequestBody UserCredentials credentials) {
-        // Lógica de autenticação
-        return "Token de autenticação";
+    public String login(@RequestBody UserCredentialsDTO credentials) {
+        return authService.login(credentials);
     }
 
     @PostMapping("/register")
-    public String register(@RequestBody UserCredentials credentials) {
-        // Lógica de registro
-        return "Usuário registrado com sucesso";
+    public String register(@RequestBody UserCredentialsDTO credentials) {
+        return authService.register(credentials);
     }
-}
-
-class UserCredentials {
-    public String username;
-    public String password;
 }
